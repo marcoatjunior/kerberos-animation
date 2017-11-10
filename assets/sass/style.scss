@@ -1,3 +1,10 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 @mixin size-pattern($width, $height, $color, $align){
   width: $width;
   height: $height;
@@ -15,45 +22,55 @@
   letter-spacing: $spacing;
 }
 
-body{ margin: 0; padding: 0; }
-
-.first-mov{
-  @include size-pattern(100%, 1000px, #FFFFFF, center);
+@mixin margin($top, $left, $right, $bottom){
+  margin-top: $top;
+  margin-left: $left;
+  margin-right: $right;
+  margin-bottom: $bottom;
 }
 
-.lets-start{
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
+.display-table{
   display: table-cell;
   vertical-align: middle;
-  @include font-pattern(helvetica, 10em, #000, 0px);
 }
 
-.second-mov, .second-mov:hover{
-  @include size-pattern(100%, 1000px, #FF0000, center);
-}
-
-#logo{
+.display-inline{
+  display: inline-block;
   vertical-align: middle;
-  width:800px;
-  height:800px;
-}
-
-.third-mov{
-  @include size-pattern(100%, 1000px, #FF6600, justify);
 }
 
 .abstract{
-  display: table-cell;
-  vertical-align: middle;
+  @extend .display-table;
+  @include font-pattern(arial, 60px, #000, 0px);
   padding: 120px;
-  @include font-pattern(arial, 60px, #FFF, 0px);
 }
 
-.fourth-mov {
-  @include size-pattern(100%, 1000px, #FFBB00, center);
+.first-mov, .second-mov, .fourth-mov{
+  @include size-pattern(100%, 1000px, #FFF, center);
+}
+
+.third-mov, .fifth-mov, .sixth-mov{
+  @include size-pattern(100%, 1000px, #FFF, justify);
+}
+
+.lets-start{
+  @extend .display-table;
+  @include font-pattern(helvetica, 10em, #000, 0px);
+}
+
+#logo{
+  @extend .display-inline;
+  @include size(400px, 470px);
+  @include margin(200px, 0px, 0px, 0px);
 }
 
 #example{
-  vertical-align: middle;
-  width:900px;
-  height:700px;
+  @extend .display-inline;
+  @include size(900px, 700px);
+  @include margin(130px, 0px, 0px, 0px);
 }
