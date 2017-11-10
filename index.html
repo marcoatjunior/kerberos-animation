@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>Kerberos Animation</title>
+    <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="first-mov">
+        <label class="lets-start">Kerberos</label>
+    </div>
+    <div class="second-mov">
+        <figure>
+            <img id="logo" src="public/images/kerberos.png" alt="Kerberos">
+        </figure>
+    </div>
+    <div class="third-mov">
+        <p class="abstract">Kerberos é um protocolo de autenticação de rede desenvolvido em meados dos anos 80 no Instituto de Tecnologia de Massachusetts (MIT). Sua principal função é prover maior segurança para aplicações cliente-servidor através de uma chave secreta criptografada.</p>
+    </div>
+    <div class="fourth-mov">
+        <figure>
+            <img id="example" src="public/images/example.png" alt="example">
+        </figure>
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function(){
+            $('.first-mov').click(
+                function(){
+                    $('.first-mov').fadeOut(300, function(){
+                        $('.second-mov').fadeIn(3000);
+                    });
+                }
+            );
+            $('.second-mov').click(
+                function(){
+                    $('.second-mov').fadeOut(300, function(){
+                        $('.third-mov').fadeIn(3000);
+                    });
+                }
+            );
+            $('.third-mov').click(
+                function(){
+                    $('.third-mov').fadeOut(300, function(){
+                        $('.fourth-mov').fadeIn(3000);
+                    });
+                }
+            );
+            $('.fourth-mov').click(
+                function(){
+                    $('.fourth-mov').fadeOut(300, function(){
+                        $('.first-mov').fadeIn(3000);
+                    });
+                }
+            );
+        });
+    });
+</script>
+</html>

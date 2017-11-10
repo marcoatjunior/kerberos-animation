@@ -1,0 +1,59 @@
+@mixin size-pattern($width, $height, $color, $align){
+  width: $width;
+  height: $height;
+  background-color: $color;
+  text-align: $align;
+  display: table;
+  position: relative;
+  cursor: default;
+}
+
+@mixin font-pattern($font, $size, $color, $spacing){
+  font-family: $font;
+  font-size: $size;
+  color: $color;
+  letter-spacing: $spacing;
+}
+
+body{ margin: 0; padding: 0; }
+
+.first-mov{
+  @include size-pattern(100%, 1000px, #FFFFFF, center);
+}
+
+.lets-start{
+  display: table-cell;
+  vertical-align: middle;
+  @include font-pattern(helvetica, 10em, #000, 0px);
+}
+
+.second-mov, .second-mov:hover{
+  @include size-pattern(100%, 1000px, #FF0000, center);
+}
+
+#logo{
+  vertical-align: middle;
+  width:800px;
+  height:800px;
+}
+
+.third-mov{
+  @include size-pattern(100%, 1000px, #FF6600, justify);
+}
+
+.abstract{
+  display: table-cell;
+  vertical-align: middle;
+  padding: 120px;
+  @include font-pattern(arial, 60px, #FFF, 0px);
+}
+
+.fourth-mov {
+  @include size-pattern(100%, 1000px, #FFBB00, center);
+}
+
+#example{
+  vertical-align: middle;
+  width:900px;
+  height:700px;
+}

@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.first-mov {
+  width: 100%;
+  height: 1000px;
+  background-color: #FFFFFF;
+  text-align: center;
+  display: table;
+  position: relative;
+  cursor: default; }
+
+.lets-start {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: helvetica;
+  font-size: 10em;
+  color: #000;
+  letter-spacing: 0px; }
+
+.second-mov, .second-mov:hover {
+  width: 100%;
+  height: 1000px;
+  background-color: #FF0000;
+  text-align: center;
+  display: table;
+  position: relative;
+  cursor: default; }
+
+#logo {
+  vertical-align: middle;
+  width: 800px;
+  height: 800px; }
+
+.third-mov {
+  width: 100%;
+  height: 1000px;
+  background-color: #FF6600;
+  text-align: justify;
+  display: table;
+  position: relative;
+  cursor: default; }
+
+.abstract {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 120px;
+  font-family: arial;
+  font-size: 60px;
+  color: #FFF;
+  letter-spacing: 0px; }
+
+.fourth-mov {
+  width: 100%;
+  height: 1000px;
+  background-color: #FFBB00;
+  text-align: center;
+  display: table;
+  position: relative;
+  cursor: default; }
+
+#example {
+  vertical-align: middle;
+  width: 900px;
+  height: 700px; }

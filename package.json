@@ -1,0 +1,14 @@
+{
+  "name": "kerberos-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mtj",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  }
+}
