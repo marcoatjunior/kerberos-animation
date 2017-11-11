@@ -22,6 +22,12 @@ body{
   letter-spacing: $spacing;
 }
 
+@mixin button-pattern($border, $background, $color){
+  border: $border;
+  background-color: $background; 
+  color: $color;
+}
+
 @mixin margin($top, $left, $right, $bottom){
   margin-top: $top;
   margin-left: $left;
@@ -44,35 +50,45 @@ body{
   text-transform: uppercase;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .display-table{
   display: table-cell;
   vertical-align: middle;
 }
 
+.hidden{
+  display: none;
+}
+
+.size-text-space{
+  height: 150px;
+}
+
 .button-design{
   @extend .strtoupper;
-  border: 2px solid white !important;
+  @extend .pointer;
+  @include button-pattern(2px solid white !important, #000 !important, #FFF !important);
   border-radius: 5px !important;
-  background-color: #000 !important; 
-  color: #FFF !important;
-  cursor: pointer;
 }
 
 .abstract{
   @extend .display-table;
   @extend .strtoupper;
-  @include font-pattern(arial, 45px, #000, 0px);
+  @include font-pattern(arial, 35px, #000, 0px);
   padding: 120px;
 }
 
 .intro, .starting , .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth{
-  @include size-pattern(100%, 100vh, #FFF, center);
   @extend .background;
+  @include size-pattern(100%, 100vh, #FFF, center);
 }
 
 .fifth-mov, .sixth-mov, .access-key{
-  @include size-pattern(100%, 100vh, #FFF, justify);
   @extend .background;
+  @include size-pattern(100%, 100vh, #FFF, justify);
 }
 
 .lets-start, .information{
@@ -80,17 +96,9 @@ body{
   @include font-pattern(helvetica, 7em, #000, 0px);
 }
 
-.hidden{
-  display: none;
-}
-
 .key-word{
   @extend .strtoupper;
   @include font-pattern(arial, 45px, #000, 1px);
-}
-
-.size-text-space{
-  height: 150px;
 }
 
 .appear{
@@ -100,6 +108,10 @@ body{
 .form-position{
   @extend .strtoupper;
   @include margin(2vh, 0vh, 0vh, 0vh);
+}
+
+.logo-align{
+  @extend .display-table;
 }
 
 #start{
@@ -116,13 +128,7 @@ body{
 }
 
 #start:hover, #present:hover{
-  border: 2px solid black !important;
-  background-color: #FFF !important;
-  color: #000 !important;
-}
-
-.logo-align{
-  @extend .display-table;
+  @include button-pattern(2px solid black !important, #FFF !important, #000 !important);
 }
 
 #logo{
@@ -146,6 +152,6 @@ body{
 }
 
 #login_submit{
-  cursor: pointer;
+  @extend .pointer;
   @include size(250px, 40px);
 }

@@ -12,20 +12,28 @@ body {
 .strtoupper, .button-design, #start, #present, .abstract, .key-word, .form-position {
   text-transform: uppercase; }
 
-.display-table, .abstract, .lets-start, .information, .appear, #start, .logo-align {
+.pointer, .button-design, #start, #present, #login_submit {
+  cursor: pointer; }
+
+.display-table, .abstract, .lets-start, .information, .appear, .logo-align, #start {
   display: table-cell;
   vertical-align: middle; }
 
+.hidden {
+  display: none; }
+
+.size-text-space {
+  height: 150px; }
+
 .button-design, #start, #present {
   border: 2px solid white !important;
-  border-radius: 5px !important;
   background-color: #000 !important;
   color: #FFF !important;
-  cursor: pointer; }
+  border-radius: 5px !important; }
 
 .abstract {
   font-family: arial;
-  font-size: 45px;
+  font-size: 35px;
   color: #000;
   letter-spacing: 0px;
   padding: 120px; }
@@ -54,17 +62,11 @@ body {
   color: #000;
   letter-spacing: 0px; }
 
-.hidden {
-  display: none; }
-
 .key-word {
   font-family: arial;
   font-size: 45px;
   color: #000;
   letter-spacing: 1px; }
-
-.size-text-space {
-  height: 150px; }
 
 .form-position {
   margin-top: 2vh;
@@ -118,6 +120,5 @@ body {
   letter-spacing: 1px; }
 
 #login_submit {
-  cursor: pointer;
   width: 250px;
   height: 40px; }
