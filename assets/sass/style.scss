@@ -34,19 +34,20 @@ body{
   height: $height;
 }
 
+.background{
+  background-image: url("../../public/images/auth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .display-table{
   display: table-cell;
   vertical-align: middle;
 }
 
-.display-inline{
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .button-design{
-  border: 5px solid white !important;
-  border-radius: 100% 100% 100% 100% !important;
+  border: 2px solid white !important;
+  border-radius: 5px !important;
   background-color: #FF0000 !important; 
   color: #FFF !important;
   text-transform: uppercase;
@@ -59,18 +60,14 @@ body{
   padding: 120px;
 }
 
-.background{
-  background-image: url("../../public/images/auth.png");
-}
-
-.intro, .starting ,.first-mov, .second-mov, .fourth-mov, .login-form, .after-auth{
+.intro, .starting , .first-mov, .second-mov, .fourth-mov, .login-form, .after-auth{
   @include size-pattern(100%, 100vh, #FFF, center);
-  //@extend .background;
+  @extend .background;
 }
 
 .third-mov, .fifth-mov, .sixth-mov, .access-key{
   @include size-pattern(100%, 100vh, #FFF, justify);
-  //@extend .background;
+  @extend .background;
 }
 
 .lets-start, .information{
@@ -104,20 +101,19 @@ body{
   @extend .display-table;
   @extend .button-design;
   @include font-pattern(arial, 20px, #000, 1px);
-  @include size(400px, 400px);
+  @include size(400px, 80px);
 }
 
 #present{
-  @extend .display-table;
   @extend .button-design;
   @include font-pattern(arial, 18px, #000, 1px);
-  @include size(200px, 80px);
+  @include size(200px, 50px);
   border-radius: none;
   
 }
 
 #start:hover, #present:hover{
-  border: 5px solid black !important;
+  border: 2px solid black !important;
   background-color: #FFF !important;
   color: #000 !important;
 }
@@ -128,13 +124,10 @@ body{
 
 #logo{
   @include size(500px, 600px);
-  @include margin(10vh, 0px, 0px, 0px);
 }
 
 #example{
-  @extend .display-inline;
   @include size(700px, 500px);
-  @include margin(10vh, 0px, 0px, 0px);
 }
 
 #username, #password{
