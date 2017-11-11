@@ -59,61 +59,41 @@ body{
   padding: 120px;
 }
 
+.background{
+  background-image: url("../../public/images/auth.png");
+}
+
 .intro, .starting ,.first-mov, .second-mov, .fourth-mov, .login-form{
   @include size-pattern(100%, 100vh, #FFF, center);
+  //@extend .background;
 }
 
 .third-mov, .fifth-mov, .sixth-mov{
   @include size-pattern(100%, 100vh, #FFF, justify);
+  //@extend .background;
 }
 
-.lets-start, .login-form{
+.lets-start, .starting{
   @extend .display-table;
   @include font-pattern(helvetica, 10em, #000, 0px);
-}
-
-.presentation{
-  @extend .lets-start;
-  @include margin(0%, 0%, 10vh, 0vh);
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 
 .hidden{
   display: none;
 }
 
-.arrow-right-down{
-  @include margin(30vh, 40vh, 0%, 0%);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.arrow-left-down{
-  @include margin(10vh, 0%, 40vh, 0%);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.arrow-right{
-  @include margin(0%, 40vh, 0%, 5vh);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.arrow-left{
-  @include margin(0%, 0%, 40vh, 30vh);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
 .key-word{
-  @include font-pattern(arial, 30px, #000, 1px);
+  text-transform: uppercase;
+  @include font-pattern(arial, 45px, #000, 1px);
+}
+
+.appear{
+  @extend .display-table;
+}
+
+.form-position{
+  text-transform: uppercase;
+  @include margin(2vh, 0vh, 0vh, 0vh);
 }
 
 #start{
@@ -147,4 +127,17 @@ body{
   @extend .display-inline;
   @include size(700px, 500px);
   @include margin(10vh, 0px, 0px, 0px);
+}
+
+#username, #password{
+  @include size(450px, 45px);
+}
+
+#login_text{
+  @include font-pattern(arial, 38px, #000, 1px);
+}
+
+#login_submit{
+  cursor: pointer;
+  @include size(250px, 40px);
 }

@@ -1,41 +1,35 @@
 $(document).ready(function(){    
-    let start   = $('#start');
-    let present = $('#present');
+    var start   = $('#start');
+    var present = $('#present');
 
-    let intro        = $('.intro');
-    let starting     = $('.starting');
-    let presentation = $('.presentation');
+    var intro        = $('.intro');
+    var starting     = $('.starting');
+    var presentation = $('.presentation');
 
-    let arrowOne   = $('.first-arrow');
-    let arrowTwo   = $('.second-arrow');
-    let arrowThree = $('.third-arrow');
-    let arrowFour  = $('.fourth-arrow');
-    
-    let firstMov  = $('.first-mov');
-    let secondMov = $('.second-mov');
-    let thirdMov  = $('.third-mov');
-    let fourthMov = $('.fourth-mov');
-    let fifthMov  = $('.fifth-mov');
-    let sixthMov  = $('.sixth-mov');
-    let loginForm  = $('.login-form');
+    var security       = $('#security');
+    var cryptography   = $('#cryptography');
+    var accessControl  = $('#access_control');
 
-    let loginUser   = $('#username');
-    let loginPasswd = $('#password');
-    let loginSubmit = $('#login_submit');
+    var firstMov  = $('.first-mov');
+    var secondMov = $('.second-mov');
+    var thirdMov  = $('.third-mov');
+    var fourthMov = $('.fourth-mov');
+    var fifthMov  = $('.fifth-mov');
+    var sixthMov  = $('.sixth-mov');
+    var loginForm  = $('.login-form');
+
+    var loginUser   = $('#username');
+    var loginPasswd = $('#password');
+    var loginSubmit = $('#login_submit');
 
     nextTransition(start, intro, starting);
 
     start.click(function(){
-        show(arrowOne, 2000);
-        show(arrowTwo, 3000);
-        show(arrowThree, 4200);
-        show(arrowFour, 5400);
-        show(presentation, 6400);
+        show(security, 2000);
+        show(cryptography, 3000);
+        show(accessControl, 4200);
+        show(presentation, 5400);
     });
-
-    loginSubmit.click(function(){
-        alert('Você está logando como ' + loginUser.val() + '.' + ' Sua senha atual é: ' + loginPasswd.val());
-    })
 
     nextTransition(present, starting, firstMov);
 
@@ -46,9 +40,9 @@ $(document).ready(function(){
     selectTransition(fifthMov, sixthMov);
     selectTransition(sixthMov, loginForm);
 
-    function show(arrow, time){
+    function show(div, time){
         setTimeout(function(){
-          arrow.removeClass('hidden');
+            div.removeClass('hidden');
         }, time);
     }
 
@@ -66,5 +60,9 @@ $(document).ready(function(){
                 next.fadeIn(3000);
             });
         });
-    } 
+    }
+
+    loginSubmit.click(function(){
+        alert('Você está logando como ' + loginUser.val() + '.' + ' Sua senha atual é: ' + loginPasswd.val());
+    });
 });
