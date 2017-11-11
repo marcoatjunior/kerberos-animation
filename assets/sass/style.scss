@@ -44,33 +44,107 @@ body{
   vertical-align: middle;
 }
 
+.button-design{
+  border: 5px solid white !important;
+  border-radius: 100% 100% 100% 100% !important;
+  background-color: #FF0000 !important; 
+  color: #FFF !important;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .abstract{
   @extend .display-table;
-  @include font-pattern(arial, 60px, #000, 0px);
+  @include font-pattern(arial, 45px, #000, 0px);
   padding: 120px;
 }
 
-.first-mov, .second-mov, .fourth-mov{
-  @include size-pattern(100%, 1000px, #FFF, center);
+.intro, .starting ,.first-mov, .second-mov, .fourth-mov, .login-form{
+  @include size-pattern(100%, 100vh, #FFF, center);
 }
 
 .third-mov, .fifth-mov, .sixth-mov{
-  @include size-pattern(100%, 1000px, #FFF, justify);
+  @include size-pattern(100%, 100vh, #FFF, justify);
 }
 
-.lets-start{
+.lets-start, .login-form{
   @extend .display-table;
   @include font-pattern(helvetica, 10em, #000, 0px);
 }
 
+.presentation{
+  @extend .lets-start;
+  @include margin(0%, 0%, 10vh, 0vh);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+.arrow-right-down{
+  @include margin(30vh, 40vh, 0%, 0%);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.arrow-left-down{
+  @include margin(10vh, 0%, 40vh, 0%);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.arrow-right{
+  @include margin(0%, 40vh, 0%, 5vh);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.arrow-left{
+  @include margin(0%, 0%, 40vh, 30vh);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.key-word{
+  @include font-pattern(arial, 30px, #000, 1px);
+}
+
+#start{
+  @extend .display-table;
+  @extend .button-design;
+  @include font-pattern(arial, 20px, #000, 1px);
+  @include size(400px, 400px);
+}
+
+#present{
+  @extend .display-table;
+  @extend .button-design;
+  @include font-pattern(arial, 18px, #000, 1px);
+  @include size(200px, 80px);
+  
+}
+
+#start:hover, #present:hover{
+  border: 5px solid black !important;
+  background-color: #FFF !important;
+  color: #000 !important;
+}
+
 #logo{
   @extend .display-inline;
-  @include size(400px, 470px);
-  @include margin(200px, 0px, 0px, 0px);
+  @include size(500px, 600px);
+  @include margin(10vh, 0px, 0px, 0px);
 }
 
 #example{
   @extend .display-inline;
-  @include size(900px, 700px);
-  @include margin(130px, 0px, 0px, 0px);
+  @include size(700px, 500px);
+  @include margin(10vh, 0px, 0px, 0px);
 }

@@ -3,9 +3,56 @@
 <head>
     <title>Kerberos Animation</title>
     <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="intro">
+        <div class="lets-start">
+            <button id="start" class="btn btn-lg btn-light">
+                <strong>Clique aqui para iniciar</strong>
+            </button>
+        </div>
+    </div>
+    <div class="starting">
+        <div class="first-arrow hidden">
+            <div class="arrow-left-down">
+                <label class="key-word">
+                    <strong>Segurança Corporativa</strong>
+                </label>
+                <img src="public/images/arrow-down-left.png">
+            </div>
+        </div>
+        <div class="second-arrow hidden">
+            <div class="arrow-right-down">
+                <img src="public/images/arrow-down-right.png">
+                <label class="key-word">
+                    <strong>Criptografia de Dados</strong>
+                </label>
+            </div>
+        </div>
+        <div class="third-arrow hidden">
+            <div class="arrow-left">
+                <label class="key-word">
+                    <strong>Controle de Acesso aos Usuários</strong>
+                </label>
+                <img src="public/images/arrow-left.png">
+            </div>
+        </div>
+        <div class="fourth-arrow hidden">
+            <div class="arrow-right"> 
+                <img src="public/images/arrow-right.png">
+                <label class="key-word">
+                    <strong>Meio de Campo entre Cliente e Servidor</strong>
+                </label>
+            </div>
+        </div>
+        <div class="presentation hidden">
+            <button id="present" class="btn btn-lg btn-light">
+                <strong>Continuar</strong>
+            </button>
+        </div>
+    </div>
     <div class="first-mov">
         <label class="lets-start">Kerberos</label>
     </div>
@@ -27,6 +74,14 @@
     </div>
     <div class="sixth-mov">
         <p class="abstract">Atualmente ele está na versão 5 e suas padronizações podem ser encontradas na RFC 4120, que surgiu como atualização da RFC 1510 onde localizam-se as especificações da versão 4 do protocolo.</p>
+    </div>
+    <div class="login-form">
+        <div class="form-control">
+            <label class="col-lg-7" id="login-form-link">Login</label>
+            <input type="text" name="username" id="username" tabindex="2" class="col-lg-7" placeholder="Username" value="">
+            <input type="password" name="password" id="password" tabindex="2" class="col-lg-7" placeholder="Password">
+            <input type="submit" name="login-submit" id="login_submit" tabindex="4" class="col-lg-7 btn btn-primary" value="Log In">
+        </div>
     </div>
 </body>
 
