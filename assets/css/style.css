@@ -4,11 +4,11 @@ body {
   overflow-x: hidden;
   overflow-y: hidden; }
 
-.display-table, .abstract, .lets-start, .starting, .appear, #start, #present {
+.display-table, .abstract, .lets-start, .information, .appear, #start, #present, .logo-align {
   display: table-cell;
   vertical-align: middle; }
 
-.display-inline, #logo, #example {
+.display-inline, #example {
   display: inline-block;
   vertical-align: middle; }
 
@@ -30,7 +30,7 @@ body {
 .background {
   background-image: url("../../public/images/auth.png"); }
 
-.intro, .starting, .first-mov, .second-mov, .fourth-mov, .login-form {
+.intro, .starting, .first-mov, .second-mov, .fourth-mov, .login-form, .after-auth {
   width: 100%;
   height: 100vh;
   background-color: #FFF;
@@ -39,7 +39,7 @@ body {
   position: relative;
   cursor: default; }
 
-.third-mov, .fifth-mov, .sixth-mov {
+.third-mov, .fifth-mov, .sixth-mov, .access-key {
   width: 100%;
   height: 100vh;
   background-color: #FFF;
@@ -48,7 +48,7 @@ body {
   position: relative;
   cursor: default; }
 
-.lets-start, .starting {
+.lets-start, .information {
   font-family: helvetica;
   font-size: 10em;
   color: #000;
@@ -63,6 +63,9 @@ body {
   font-size: 45px;
   color: #000;
   letter-spacing: 1px; }
+
+.size-text-space {
+  height: 150px; }
 
 .form-position {
   text-transform: uppercase;
@@ -85,7 +88,8 @@ body {
   color: #000;
   letter-spacing: 1px;
   width: 200px;
-  height: 80px; }
+  height: 80px;
+  border-radius: none; }
 
 #start:hover, #present:hover {
   border: 5px solid black !important;
@@ -111,6 +115,12 @@ body {
 #username, #password {
   width: 450px;
   height: 45px; }
+
+#user_logged {
+  font-family: arial;
+  font-size: 25px;
+  color: #000;
+  letter-spacing: 1px; }
 
 #login_text {
   font-family: arial;

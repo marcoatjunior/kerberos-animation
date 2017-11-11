@@ -15,42 +15,48 @@
         </div>
     </div>
     <div class="starting">
-        <div id="security" class="hidden">
-            <label class="key-word">
-                <strong>Segurança Corporativa</strong>
-            </label>
-        </div>
-        <div id="cryptography" class="hidden">
-            <label class="key-word">
-                <strong>Criptografia de Dados</strong>
-            </label>
-        </div>
-        <div id="access_control" class="hidden">
-            <label class="key-word">
-                <strong>Controle de Acesso aos Usuários</strong>
-            </label>
-        </div>
-        <div class="presentation hidden">
-            <button id="present" class="btn btn-lg btn-light">
-                <strong>Continuar</strong>
-            </button>
+        <div class="information">
+            <div id="security" class="size-text-space hidden">
+                <label class="key-word">
+                    <strong>Segurança Corporativa</strong>
+                </label>
+            </div>
+            <div id="cryptography" class="size-text-space hidden">
+                <label class="key-word">
+                    <strong>Criptografia de Dados</strong>
+                </label>
+            </div>
+            <div id="access_control" class="size-text-space hidden">
+                <label class="key-word">
+                    <strong>Controle de Acesso</strong>
+                </label>
+            </div>
+            <div class="presentation hidden">
+                <button id="present" class="btn btn-lg btn-light">
+                    <strong>Continuar</strong>
+                </button>
+            </div>
         </div>
     </div>
     <div class="first-mov">
         <label class="lets-start">Kerberos</label>
     </div>
     <div class="second-mov">
-        <figure>
-            <img id="logo" src="public/images/kerberos.png" alt="Kerberos">
-        </figure>
+        <div class="logo-align">
+            <figure>
+                <img id="logo" src="public/images/kerberos.png" alt="Kerberos">
+            </figure>
+        </div>
     </div>
     <div class="third-mov">
         <p class="abstract">Kerberos é um protocolo de autenticação de rede desenvolvido em meados dos anos 80 no Instituto de Tecnologia de Massachusetts (MIT). Sua principal função é prover maior segurança para aplicações cliente-servidor através de uma chave secreta criptografada.</p>
     </div>
     <div class="fourth-mov">
-        <figure>
-            <img id="example" src="public/images/example.png" alt="example">
-        </figure>
+        <div class="logo-align">
+            <figure>
+                <img id="example" src="public/images/example.png" alt="example">
+            </figure>
+        </div>
     </div>
     <div class="fifth-mov">
         <p class="abstract">Há uma série de softwares hoje em dia que possuem suporte ao Kerberos através de bibliotecas e pacotes, onde entre elas encontram-se os servidores Apache, Apache 2 e Samba, roteadores e switches Cisco, sistemas operacionais Windows e MAC OS X, dentre outros.</p>
@@ -66,14 +72,26 @@
             <div class="form-position">
                 <label for="username">User: </label>
                 <input type="text" id="username" >
+            </div>
             <div class="form-position">
                 <label for="password">Pass: </label>
                 <input type="password" id="password" >
             </div>
             <div class="form-position">
-                <input type="submit" id="login_submit" tabindex="4" class="btn btn-primary" value="LOG IN">
+                <input type="submit" id="login_submit" class="btn btn-primary" value="LOG IN">
             </div>
         </div>
+    </div>
+    <div class="after-auth">
+        <div class="logo-align">
+            <figure>
+                <img id="user_key" src="public/images/user_key.png" alt="example">
+            </figure>
+            <label id="user_logged"></label>
+        </div>
+    </div>
+    <div class="access-key">
+        <p class="abstract">No momento em que é efetuado o acesso em sistema com as credenciais disponibilizadas ou criadas por um administrador, o Kerberos entra em ação e verifica essas informações junto a um servidor, onde comumente é utilizado o Active Directory (AD), o diretório responsável por conter os usuários ativos no sistema e que é utilizado em sistemas Windows Server.</p>
     </div>
 </body>
 

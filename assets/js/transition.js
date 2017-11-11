@@ -16,13 +16,15 @@ $(document).ready(function(){
     var fourthMov = $('.fourth-mov');
     var fifthMov  = $('.fifth-mov');
     var sixthMov  = $('.sixth-mov');
-    var loginForm  = $('.login-form');
+    var loginForm = $('.login-form');
+    var afterAuth = $('.after-auth');
+    var accessKey = $('.access-key');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
     var loginSubmit = $('#login_submit');
-
-    nextTransition(start, intro, starting);
+    var userKey     = $('#user_key');
+    var userLogged  = $('#user_logged');
 
     start.click(function(){
         show(security, 2000);
@@ -31,6 +33,19 @@ $(document).ready(function(){
         show(presentation, 5400);
     });
 
+    loginSubmit.click(function(){
+        if(loginPasswd.val() == "123"){
+            selectTransition(loginForm, afterAuth);
+        }else{
+            alert('Aguarde a senha padrão para continuar a atividade.');
+        }
+    });
+
+    userKey.mouseleave(function(){
+        userLogged.html('<strong>Você acessou como ' + loginUser.val() + '.' + ' Sua senha atual é: ' + loginPasswd.val() + '</strong>');
+    });
+
+    nextTransition(start, intro, starting);
     nextTransition(present, starting, firstMov);
 
     selectTransition(firstMov, secondMov);
@@ -39,6 +54,7 @@ $(document).ready(function(){
     selectTransition(fourthMov, fifthMov);
     selectTransition(fifthMov, sixthMov);
     selectTransition(sixthMov, loginForm);
+    selectTransition(afterAuth, accessKey);
 
     function show(div, time){
         setTimeout(function(){
@@ -61,8 +77,4 @@ $(document).ready(function(){
             });
         });
     }
-
-    loginSubmit.click(function(){
-        alert('Você está logando como ' + loginUser.val() + '.' + ' Sua senha atual é: ' + loginPasswd.val());
-    });
 });
