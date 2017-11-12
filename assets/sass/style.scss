@@ -86,7 +86,7 @@ body{
   @include size-pattern(100%, 100vh, #FFF, center);
 }
 
-.fifth-mov, .sixth-mov, .access-key{
+.fifth-mov, .sixth-mov, .access-key, .ticket-grant{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, justify);
 }
@@ -101,7 +101,7 @@ body{
   @include font-pattern(arial, 45px, #000, 1px);
 }
 
-.appear{
+.appear, .logo-align{
   @extend .display-table;
 }
 
@@ -110,8 +110,14 @@ body{
   @include margin(2vh, 0vh, 0vh, 0vh);
 }
 
-.logo-align{
+.encrypt-system{
   @extend .display-table;
+  @extend .strtoupper;
+  @include font-pattern(arial, 35px, #000, 0px);
+}
+
+.grant-service{
+  @include margin(5%, 0px, 0px, 0px);
 }
 
 #start{
@@ -124,10 +130,15 @@ body{
 #present{
   @extend .button-design;
   @include font-pattern(arial, 18px, #000, 1px);
-  @include size(200px, 50px);  
+  @include size(200px, 50px);
 }
 
-#start:hover, #present:hover{
+#how_works{
+  @extend #start; 
+  @include size(400px, 60px);
+}
+
+#start:hover, #present:hover, #how_works:hover{
   @include button-pattern(2px solid black !important, #FFF !important, #000 !important);
 }
 

@@ -1,6 +1,7 @@
 $(document).ready(function(){    
-    var start   = $('#start');
-    var present = $('#present');
+    var start    = $('#start');
+    var present  = $('#present');
+    var howWorks = $('#how_works');
 
     var intro        = $('.intro');
     var starting     = $('.starting');
@@ -10,15 +11,16 @@ $(document).ready(function(){
     var cryptography   = $('#cryptography');
     var accessControl  = $('#access_control');
 
-    var firstMov  = $('.first-mov');
-    var secondMov = $('.second-mov');
-    var thirdMov  = $('.third-mov');
-    var fourthMov = $('.fourth-mov');
-    var fifthMov  = $('.fifth-mov');
-    var sixthMov  = $('.sixth-mov');
-    var loginForm = $('.login-form');
-    var afterAuth = $('.after-auth');
-    var accessKey = $('.access-key');
+    var firstMov    = $('.first-mov');
+    var secondMov   = $('.second-mov');
+    var thirdMov    = $('.third-mov');
+    var fourthMov   = $('.fourth-mov');
+    var fifthMov    = $('.fifth-mov');
+    var sixthMov    = $('.sixth-mov');
+    var loginForm   = $('.login-form');
+    var afterAuth   = $('.after-auth');
+    var accessKey   = $('.access-key');
+    var ticketGrant = $('.ticket-grant');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -55,6 +57,7 @@ $(document).ready(function(){
     selectTransition(fifthMov, sixthMov);
     selectTransition(sixthMov, loginForm);
     selectTransition(afterAuth, accessKey);
+    selectTransition(accessKey, ticketGrant);
 
     function show(div, time){
         setTimeout(function(){
