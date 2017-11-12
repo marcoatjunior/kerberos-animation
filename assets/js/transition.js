@@ -21,6 +21,7 @@ $(document).ready(function(){
     var afterAuth   = $('.after-auth');
     var accessKey   = $('.access-key');
     var ticketGrant = $('.ticket-grant');
+    var searching   = $('.searching-grant');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -47,8 +48,24 @@ $(document).ready(function(){
         userLogged.html('<strong>Você acessou como ' + loginUser.val() + '.' + ' Sua senha atual é: ' + loginPasswd.val() + '</strong>');
     });
 
+    howWorks.click(function(){
+        var elem = document.getElementById("bar");
+        var width = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    });
+
     nextTransition(start, intro, starting);
     nextTransition(present, starting, firstMov);
+    nextTransition(howWorks, ticketGrant, searching);
 
     selectTransition(firstMov, secondMov);
     selectTransition(secondMov, thirdMov);
