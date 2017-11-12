@@ -87,7 +87,7 @@ body{
   @include size-pattern(100%, 100vh, #FFF, center);
 }
 
-.fifth-mov, .sixth-mov, .access-key, .ticket-grant{
+.fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, justify);
 }

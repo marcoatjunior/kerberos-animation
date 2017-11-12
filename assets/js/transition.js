@@ -22,6 +22,7 @@ $(document).ready(function(){
     var accessKey   = $('.access-key');
     var ticketGrant = $('.ticket-grant');
     var searching   = $('.searching-grant');
+    var granted     = $('.granted');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -51,10 +52,11 @@ $(document).ready(function(){
     howWorks.click(function(){
         var elem = document.getElementById("bar");
         var width = 0;
-        var id = setInterval(frame, 10);
+        var id = setInterval(frame, 250);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
+                selectTransition(searching, granted);
             } else {
                 width++;
                 elem.style.width = width + '%';

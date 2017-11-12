@@ -5,7 +5,7 @@ body {
   overflow-y: hidden; }
 
 .background, .intro, .starting, .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
-.searching-grant, .fifth-mov, .sixth-mov, .access-key, .ticket-grant {
+.searching-grant, .fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted {
   background-image: url("../../public/images/auth.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -49,7 +49,7 @@ body {
   position: relative;
   cursor: default; }
 
-.fifth-mov, .sixth-mov, .access-key, .ticket-grant {
+.fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted {
   width: 100%;
   height: 100vh;
   background-color: #FFF;
