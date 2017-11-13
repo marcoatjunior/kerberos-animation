@@ -130,6 +130,37 @@
             <strong>Esse período de aguardo, que normalmente conhecemos como a mensagem de "Bem-vindo" seguido de um loading no Windows, é a etapa onde o Kerberos está verificando suas credenciais junto ao servidor e liberando seu acesso ao domínio.</strong>
         </p>
     </div>
+    <div class="success-or-fail">
+        <p class="abstract">
+            <strong>Caso o usuário pertença ao domínio e a senha esteja correta, o usuário recebe o TGT e tem acesso. Com o TGT disponibilizado, todas as requisições feitas pelo usuário serão feitas diretamente aos serviços do servidor, o chamado TGS: "TICKET GRANTING SERVER".</strong>
+        </p>
+    </div>
+    <div class="simplifying">
+        <div class="logo-align">
+            <figure>
+                <img id="realm" src="public/images/kerberos_realm.png">
+            </figure>
+        </div>
+    </div>
+    <div class="kdc-flow">
+        <div class="logo-align">
+            <figure>
+                <img id="in_practice" src="public/images/kerberos_flow.png">
+            </figure>
+        </div>
+    </div>
+    <div class="final-user-view">
+        <div class="abstract">
+            <p class="user-view">
+                <strong>Agora que sabemos o fluxo seguido pelo Kerberos e temos a noção de usuário comum quanto ao funcionamento do protocolo, podemos seguir para a parte técnica, de processo de instalação e configuração do Kerberos.</strong>
+            </p>
+            <div class="start-admin-view">
+                <button id="admin_view" class="btn btn-lg btn-light">
+                    <strong>Visão do Administrador</strong>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="assets/js/transition.js"></script>
 </html>

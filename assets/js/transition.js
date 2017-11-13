@@ -23,6 +23,10 @@ $(document).ready(function(){
     var ticketGrant = $('.ticket-grant');
     var searching   = $('.searching-grant');
     var granted     = $('.granted');
+    var successFail = $('.success-or-fail');
+    var simplifying = $('.simplifying');
+    var kdcFlow     = $('.kdc-flow');
+    var userView    = $('.final-user-view');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -77,6 +81,10 @@ $(document).ready(function(){
     selectTransition(sixthMov, loginForm);
     selectTransition(afterAuth, accessKey);
     selectTransition(accessKey, ticketGrant);
+    selectTransition(granted, successFail);
+    selectTransition(successFail, simplifying);
+    selectTransition(simplifying, kdcFlow);
+    selectTransition(kdcFlow, userView);
 
     function show(div, time){
         setTimeout(function(){
