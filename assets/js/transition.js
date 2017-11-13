@@ -1,7 +1,8 @@
 $(document).ready(function(){    
-    var start    = $('#start');
-    var present  = $('#present');
-    var howWorks = $('#how_works');
+    var start     = $('#start');
+    var present   = $('#present');
+    var howWorks  = $('#how_works');
+    var adminView = $('#admin_view');
 
     var intro        = $('.intro');
     var starting     = $('.starting');
@@ -27,6 +28,8 @@ $(document).ready(function(){
     var simplifying = $('.simplifying');
     var kdcFlow     = $('.kdc-flow');
     var userView    = $('.final-user-view');
+
+    var developing  = $('.developing');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -72,6 +75,7 @@ $(document).ready(function(){
     nextTransition(start, intro, starting);
     nextTransition(present, starting, firstMov);
     nextTransition(howWorks, ticketGrant, searching);
+    nextTransition(adminView, userView, developing);
 
     selectTransition(firstMov, secondMov);
     selectTransition(secondMov, thirdMov);

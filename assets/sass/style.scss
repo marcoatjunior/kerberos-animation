@@ -82,7 +82,7 @@ body{
 }
 
 .intro, .starting , .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
-.searching-grant, .simplifying, .kdc-flow{
+.searching-grant, .simplifying, .kdc-flow, .developing{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, center);
 }
