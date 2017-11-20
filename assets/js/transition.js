@@ -12,22 +12,32 @@ $(document).ready(function(){
     var cryptography   = $('#cryptography');
     var accessControl  = $('#access_control');
 
-    var firstMov    = $('.first-mov');
-    var secondMov   = $('.second-mov');
-    var thirdMov    = $('.third-mov');
-    var fourthMov   = $('.fourth-mov');
-    var fifthMov    = $('.fifth-mov');
-    var sixthMov    = $('.sixth-mov');
-    var loginForm   = $('.login-form');
-    var afterAuth   = $('.after-auth');
-    var accessKey   = $('.access-key');
-    var ticketGrant = $('.ticket-grant');
-    var searching   = $('.searching-grant');
-    var granted     = $('.granted');
-    var successFail = $('.success-or-fail');
-    var simplifying = $('.simplifying');
-    var kdcFlow     = $('.kdc-flow');
-    var userView    = $('.final-user-view');
+    var firstMov      = $('.first-mov');
+    var secondMov     = $('.second-mov');
+    var thirdMov      = $('.third-mov');
+    var fourthMov     = $('.fourth-mov');
+    var fifthMov      = $('.fifth-mov');
+    var sixthMov      = $('.sixth-mov');
+    var loginForm     = $('.login-form');
+    var afterAuth     = $('.after-auth');
+    var accessKey     = $('.access-key');
+    var ticketGrant   = $('.ticket-grant');
+    var searching     = $('.searching-grant');
+    var granted       = $('.granted');
+    var successFail   = $('.success-or-fail');
+    var simplifying   = $('.simplifying');
+    var kdcFlow       = $('.kdc-flow');
+    var userView      = $('.final-user-view');
+    var krbconf       = $('.krbconf');
+    var connectAd     = $('.connect-ad');
+    var working       = $('.working');
+    var kerberizeInfo = $('.kerberize-info');
+    var kerberize     = $('.kerberize');
+    var practice      = $('.practice');
+    var hashCaptched  = $('.hashCaptched');
+    var conclusion    = $('.conclusion');
+    var references    = $('.references');
+    var projectGroup  = $('.projectGroup');
 
     var developing  = $('.developing');
 
@@ -75,7 +85,7 @@ $(document).ready(function(){
     nextTransition(start, intro, starting);
     nextTransition(present, starting, firstMov);
     nextTransition(howWorks, ticketGrant, searching);
-    nextTransition(adminView, userView, developing);
+    nextTransition(adminView, userView, krbconf);
 
     selectTransition(firstMov, secondMov);
     selectTransition(secondMov, thirdMov);
