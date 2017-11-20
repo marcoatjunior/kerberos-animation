@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 .background, .intro, .starting, .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
 .searching-grant, .simplifying, .kdc-flow, .krbconf-form, .krbconf, .working, .kerberize,
@@ -98,6 +100,12 @@ body {
 .progress-size {
   width: 100%; }
 
+.topic {
+  margin-top: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px; }
+
 #start, #how_works, #admin_view {
   font-family: arial;
   font-size: 20px;
@@ -127,13 +135,17 @@ body {
   width: 500px;
   height: 600px; }
 
-#example, #realm {
+#example, #realm, #kerberize_app {
   width: 800px;
   height: 600px; }
 
 #in_practice {
   width: 800px;
   height: 450px; }
+
+#ad_connection {
+  width: 1200px;
+  height: 800px; }
 
 .text-input-size {
   width: 450px;

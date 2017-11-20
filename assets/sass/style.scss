@@ -1,8 +1,8 @@
 body{
   margin: 0;
   padding: 0;
-  // overflow-x: hidden;
-  // overflow-y: hidden;
+   overflow-x: hidden;
+   overflow-y: hidden;
 }
 
 @mixin size-pattern($width, $height, $color, $align){
@@ -133,6 +133,10 @@ body{
   width: 100%;
 }
 
+.topic{
+  @include margin(40px, 0px, 0px, 0px);
+}
+
 #start{
   @extend .display-table;
   @extend .button-design;
@@ -159,12 +163,16 @@ body{
   @include size(500px, 600px);
 }
 
-#example, #realm{
+#example, #realm, #kerberize_app{
   @include size(800px, 600px);
 }
 
 #in_practice{
   @include size(800px, 450px); 
+}
+
+#ad_connection{
+  @include size(1200px, 800px);
 }
 
 .text-input-size{

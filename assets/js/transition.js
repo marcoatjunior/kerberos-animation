@@ -99,6 +99,10 @@ $(document).ready(function(){
     selectTransition(successFail, simplifying);
     selectTransition(simplifying, kdcFlow);
     selectTransition(kdcFlow, userView);
+    selectTransition(krbconf, connectAd);
+    selectTransition(connectAd, working);
+    selectTransition(working, kerberizeInfo);
+    selectTransition(kerberizeInfo, kerberize);
 
     function show(div, time){
         setTimeout(function(){
