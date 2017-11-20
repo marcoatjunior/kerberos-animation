@@ -1,8 +1,8 @@
 body{
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
 }
 
 @mixin size-pattern($width, $height, $color, $align){
@@ -82,12 +82,14 @@ body{
 }
 
 .intro, .starting , .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
-.searching-grant, .simplifying, .kdc-flow, .developing{
+.searching-grant, .simplifying, .kdc-flow, .krbconf-form, .krbconf, .working, .kerberize,
+.practice, .hash-captched, .project-group{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, center);
 }
 
-.fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted, .success-or-fail, .final-user-view{
+.fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted, .success-or-fail, .final-user-view,
+.connect-ad, .kerberize-info, .conclusion, .references{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, justify);
 }
@@ -119,6 +121,12 @@ body{
 
 .grant-service, .start-admin-view{
   @include margin(5%, 0px, 0px, 0px);
+}
+
+.progress{
+  background-color: transparent;
+  @extend .display-table;
+  @include size(100%, 50px);
 }
 
 .progress-size{
@@ -159,15 +167,19 @@ body{
   @include size(800px, 450px); 
 }
 
-#username, #password{
+.text-input-size{
   @include size(450px, 45px);
+}
+
+.text-input-size-archive{
+  @include size(450px, 30px);
 }
 
 #user_logged{
   @include font-pattern(arial, 25px, #000, 1px);
 }
 
-#login_text{
+#login_text, #krb5{
   @include font-pattern(arial, 38px, #000, 1px);
 }
 
@@ -178,10 +190,4 @@ body{
 
 #bar{
   @include size(0%, 50px);
-}
-
-.progress{
-  background-color: transparent;
-  @extend .display-table;
-  @include size(100%, 50px);
 }
