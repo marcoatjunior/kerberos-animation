@@ -33,13 +33,9 @@ $(document).ready(function(){
     var working       = $('.working');
     var kerberizeInfo = $('.kerberize-info');
     var kerberize     = $('.kerberize');
-    var practice      = $('.practice');
-    var hashCaptched  = $('.hashCaptched');
     var conclusion    = $('.conclusion');
     var references    = $('.references');
     var projectGroup  = $('.projectGroup');
-
-    var developing  = $('.developing');
 
     var loginUser   = $('#username');
     var loginPasswd = $('#password');
@@ -103,6 +99,9 @@ $(document).ready(function(){
     selectTransition(connectAd, working);
     selectTransition(working, kerberizeInfo);
     selectTransition(kerberizeInfo, kerberize);
+    selectTransition(kerberize, conclusion);
+    selectTransition(conclusion, references);
+    selectTransition(references, projectGroup);
 
     function show(div, time){
         setTimeout(function(){

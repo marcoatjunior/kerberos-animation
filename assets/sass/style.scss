@@ -1,8 +1,8 @@
 body{
   margin: 0;
   padding: 0;
-   overflow-x: hidden;
-   overflow-y: hidden;
+   //overflow-x: hidden;
+   //overflow-y: hidden;
 }
 
 @mixin size-pattern($width, $height, $color, $align){
@@ -89,7 +89,7 @@ body{
 }
 
 .fifth-mov, .sixth-mov, .access-key, .ticket-grant, .granted, .success-or-fail, .final-user-view,
-.connect-ad, .kerberize-info, .conclusion, .references{
+.connect-ad, .kerberize-info, .conclusion, .references, .references-continuation{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, justify);
 }
@@ -135,6 +135,15 @@ body{
 
 .topic{
   @include margin(40px, 0px, 0px, 0px);
+}
+
+.link{
+  color: #000;
+}
+
+.link:hover{
+  text-decoration: none;
+  color: #000;
 }
 
 #start{
