@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 .background, .intro, .starting, .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
 .searching-grant, .simplifying, .kdc-flow, .krbconf-form, .krbconf, .working, .kerberize,

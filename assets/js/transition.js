@@ -35,6 +35,7 @@ $(document).ready(function(){
     var kerberize     = $('.kerberize');
     var conclusion    = $('.conclusion');
     var references    = $('.references');
+    var references2   = $('.references-continuation');
     var projectGroup  = $('.projectGroup');
 
     var loginUser   = $('#username');
@@ -101,7 +102,8 @@ $(document).ready(function(){
     selectTransition(kerberizeInfo, kerberize);
     selectTransition(kerberize, conclusion);
     selectTransition(conclusion, references);
-    selectTransition(references, projectGroup);
+    selectTransition(references, references2);
+    selectTransition(references2, projectGroup);
 
     function show(div, time){
         setTimeout(function(){
