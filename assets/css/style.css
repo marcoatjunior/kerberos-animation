@@ -43,7 +43,7 @@ body {
 
 .intro, .starting, .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
 .searching-grant, .simplifying, .kdc-flow, .krbconf-form, .krbconf, .working, .kerberize,
-.practice, .hash-captched, .project-group, .practice {
+.practice, .hash-captched, .project-group {
   width: 100%;
   height: 100vh;
   background-color: #FFF;
