@@ -33,6 +33,7 @@ $(document).ready(function(){
     var working       = $('.working');
     var kerberizeInfo = $('.kerberize-info');
     var kerberize     = $('.kerberize');
+    var practice      = $('.practice');
     var conclusion    = $('.conclusion');
     var references    = $('.references');
     var references2   = $('.references-continuation');
@@ -100,7 +101,8 @@ $(document).ready(function(){
     selectTransition(connectAd, working);
     selectTransition(working, kerberizeInfo);
     selectTransition(kerberizeInfo, kerberize);
-    selectTransition(kerberize, conclusion);
+    selectTransition(kerberize, practice);
+    selectTransition(practice, conclusion);
     selectTransition(conclusion, references);
     selectTransition(references, references2);
     selectTransition(references2, projectGroup);

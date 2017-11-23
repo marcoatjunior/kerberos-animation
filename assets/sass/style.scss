@@ -83,7 +83,7 @@ body{
 
 .intro, .starting , .first-mov, .second-mov, .third-mov, .fourth-mov, .login-form, .after-auth,
 .searching-grant, .simplifying, .kdc-flow, .krbconf-form, .krbconf, .working, .kerberize,
-.practice, .hash-captched, .project-group{
+.practice, .hash-captched, .project-group, .practice{
   @extend .background;
   @include size-pattern(100%, 100vh, #FFF, center);
 }
