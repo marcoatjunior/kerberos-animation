@@ -30,12 +30,10 @@ $(document).ready(function(){
     var userView      = $('.final-user-view');
     var krbconf       = $('.krbconf');
     var connectAd     = $('.connect-ad');
-    var working       = $('.working');
     var kerberizeInfo = $('.kerberize-info');
     var kerberize     = $('.kerberize');
     var conclusion    = $('.conclusion');
     var references    = $('.references');
-    var references2   = $('.references-continuation');
     var projectGroup  = $('.projectGroup');
 
     var loginUser   = $('#username');
@@ -97,13 +95,11 @@ $(document).ready(function(){
     selectTransition(simplifying, kdcFlow);
     selectTransition(kdcFlow, userView);
     selectTransition(krbconf, connectAd);
-    selectTransition(connectAd, working);
-    selectTransition(working, kerberizeInfo);
+    selectTransition(connectAd, kerberizeInfo);
     selectTransition(kerberizeInfo, kerberize);
     selectTransition(kerberize, conclusion);
     selectTransition(conclusion, references);
-    selectTransition(references, references2);
-    selectTransition(references2, projectGroup);
+    selectTransition(references, projectGroup);
 
     function show(div, time){
         setTimeout(function(){

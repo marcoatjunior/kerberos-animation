@@ -3,7 +3,7 @@
 <head>
     <title>Kerberos Animation</title>
     <link rel="icon" href="public/images/kerberos.ico" type="image/x-icon">
-    <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -173,25 +173,18 @@
             <strong>Quando configurado corretamente, o Kerberos comunica-se automaticamente com o AD através de habilitação manual no Windows Server, onde essa permissão é liberada na pasta “inetsrv”, que fica localizada no System32 e necessita ser acessada com condições de administrador. Essa pasta é responsável por configurar o sistema de autenticação do Windows.</strong>
         </p>
     </div>
-    <div class="working">
-        <div class="logo-align">
-            <figure>
-                <img id="ad_connection" src="public/images/kdc_working.jpg">
-            </figure>
-        </div>
-    </div>
     <div class="kerberize-info">
         <div class="abstract">
-            <p class="reasons">
+            <p class="reasons consideration">
                 <strong>Um dos motivos por se considerar o Kerberos uma ferramenta completa de se utilizar é quando se opta por migrar um servidor que utiliza outro método de autenticação para utilizar o Kerberos. Essa transferência é conhecida como Kerberizar a aplicação e consiste em algumas mudanças para o seu pleno funcionamento:</strong>
             </p>
-            <p class="topic">
+            <p class="topic consideration">
             <strong>- Buscar as informações de dados de usuários já existentes no sistema;</strong>
             </p>
-            <p class="topic">
+            <p class="topic consideration">
             <strong>- Cachear essas informações de modo a tornar a requisição mais eficiente;</strong>
             </p>
-            <p class="topic">
+            <p class="topic consideration">
             <strong>- Verificar os tickets já solicitados pelos usuários para evitar que tenha de ser repetido o processo para cada serviço já disponibilizado;</strong>
             </p>
         </div>
@@ -205,59 +198,45 @@
     </div>
     <div class="conclusion">
         <div class="abstract">
-            <p class="finishing">
+            <p class="finishing consideration">
                 <strong>A conclusão geral que se pode ter em relação ao Kerberos é que, mesmo sendo um protocolo de autenticação de rede criado há mais de 30 anos, consegue se reinventar em meio às tecnologias atuais e continua sendo utilizado com frequência, devido a sua efetividade.</strong>
             </p>
-            <p class="topic">
+            <p class="topic consideration">
                 <strong>Sua integração com servidores Windows (Server) e Samba (Linux) é um dos facilitadores que permite que até hoje vejamos ele em diversas redes corporativas e universidades.</strong>
             </p>
         </div>
     </div>
     <div class="references">
         <div class="abstract">
-            <p class="bibliography text-left">
-                <strong>UFRJ - Trabalho Redes de Computadores I - Kerberos:</strong>
-                <a href="https://www.gta.ufrj.br/grad/99_2/marcos/kerberos.htm" class="link" target="_blank">https://www.gta.ufrj.br/grad/99_2/marcos/kerberos.htm</a>
+            <p class="bibliography consideration text-center">
+                <a href="https://www.gta.ufrj.br/grad/99_2/marcos/kerberos.htm" class="link" target="_blank"><strong>UFRJ - Trabalho Redes de Computadores I - Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>RFC 1510 - Kerberos:</strong>
-                <a href="https://tools.ietf.org/html/rfc1510" class="link" target="_blank">https://tools.ietf.org/html/rfc1510</a>
+            <p class="consideration text-center">
+                <a href="https://tools.ietf.org/html/rfc1510" class="link" target="_blank"><strong>RFC 1510 - Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>RFC 4120 - Kerberos V5:</strong>
-                <a href="https://www.ietf.org/rfc/rfc4120.txt" class="link" target="_blank">https://www.ietf.org/rfc/rfc4120.txt</a>
+            <p class="consideration text-center">
+                <a href="https://www.ietf.org/rfc/rfc4120.txt" class="link" target="_blank"><strong>RFC 4120 - Kerberos V5</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>Conhecendo o Protocolo de Rede Kerberos:</strong>
-                <a href="https://www.profissionaisti.com.br/2011/11/conhecendo-o-protocolo-de-rede-kerberos" class="link" target="_blank">https://www.profissionaisti.com.br/2011/11/conhecendo-o-protocolo-de-rede-kerberos</a>
+            <p class="consideration text-center">
+                <a href="https://www.profissionaisti.com.br/2011/11/conhecendo-o-protocolo-de-rede-kerberos" class="link" target="_blank"><strong>Conhecendo o Protocolo de Rede Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>Active Directory - Uma Implementação Prática:</strong>
-                <a href="http://sombrio.ifc.edu.br/download/redes/TCC_2013/ARTIGO_Joelson.pdf" class="link" target="_blank">http://sombrio.ifc.edu.br/download/redes/TCC_2013/ARTIGO_Joelson.pdf</a>
+            <p class="consideration text-center">
+                <a href="http://sombrio.ifc.edu.br/download/redes/TCC_2013/ARTIGO_Joelson.pdf" class="link" target="_blank"><strong>Active Directory - Uma Implementação Prática</strong></a>
             </p>
-        </div>
-    </div>
-    <div class="references-continuation">
-        <div class="abstract">
-            <p class="bibliography text-left">
-                <strong>Visão Geral da Autenticação Kerberos:</strong>
-                <a href="https://msdn.microsoft.com/pt-br/library/hh831553(v=ws.11).aspx" class="link" target="_blank">https://msdn.microsoft.com/pt-br/library/hh831553(v=ws.11).aspx</a>
+            <p class="consideration text-center">
+                <a href="https://msdn.microsoft.com/pt-br/library/hh831553(v=ws.11).aspx" class="link" target="_blank"><strong>Visão Geral da Autenticação Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>RFC 1510 - Kerberos:</strong>
-                <a href="https://tools.ietf.org/html/rfc1510" class="link" target="_blank">https://tools.ietf.org/html/rfc1510</a>
+            <p class="consideration text-center">
+                <a href="https://tools.ietf.org/html/rfc1510" class="link" target="_blank"><strong>RFC 1510 - Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>What Is Kerberos?</strong>
-                <a href="http://searchsecurity.tech/definition/Kerberos" class="link" target="_blank">http://searchsecurity.tec class="link" htarget.com/definition/Kerberos</a>
+            <p class="consideration text-center">
+                <a href="http://searchsecurity.tech/definition/Kerberos" class="link" target="_blank"><strong>What Is Kerberos?</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>Microsoft Kerberos:</strong>
-                <a href="https://msdn.microsoft.com/pt-br/library/windows/desktop/aa378747(v=vs.85).aspx" class="link" target="_blank">https://msdn.microsoft.com/pt-br/library/windows/desktop/aa378747(v=vs.85).aspx</a>
+            <p class="consideration text-center">
+                <a href="https://msdn.microsoft.com/pt-br/library/windows/desktop/aa378747(v=vs.85).aspx" class="link" target="_blank"><strong>Microsoft Kerberos</strong></a>
             </p>
-            <p class="topic text-left">
-                <strong>Kerberos - The Network Authentication Protocol:</strong>
-                <a href="https://web.mit.edu/kerberos" class="link" target="_blank">https://web.mit.edu/kerberos</a>
+            <p class="consideration text-center">
+                <a href="https://web.mit.edu/kerberos" class="link" target="_blank"><strong>Kerberos - The Network Authentication Protocol</strong></a>
             </p>
         </div>
     </div>

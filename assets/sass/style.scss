@@ -192,6 +192,10 @@ body{
   @include size(450px, 30px);
 }
 
+.consideration{
+  @include font-pattern(arial, 25px, #000, 1px);
+}
+
 #user_logged{
   @include font-pattern(arial, 25px, #000, 1px);
 }
